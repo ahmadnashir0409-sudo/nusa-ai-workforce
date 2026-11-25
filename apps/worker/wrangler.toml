@@ -1,0 +1,18 @@
+name = "nusa-ai-workforce"
+main = "src/index.ts"
+compatibility_date = "2026-11-25"
+compatibility_flags = ["nodejs_compat"]
+
+[ai]
+binding = "AI"
+
+[durable_objects]
+bindings = [{ name = "WORKFORCE_AGENT", class_name = "WorkforceAgent" }]
+
+[[migrations]]
+tag = "v1"
+new_sqlite_classes = ["WorkforceAgent"]
+
+[vars]
+CORS_ORIGIN = "http://localhost:8080"
+AI_MODEL = "@cf/meta/llama-3.1-8b-instruct"
