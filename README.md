@@ -16,7 +16,7 @@ This is the **planning MVP scaffold**. It can authenticate users, request a stru
 2. Run `supabase/migrations/0001_initial_schema.sql` in that new project's SQL Editor.
 3. Enable Supabase Email Auth.
 4. Copy `apps/web/config.js` and fill `SUPABASE_URL`, `SUPABASE_ANON_KEY`, and `API_BASE_URL`.
-5. In `apps/worker`, run `npm install`.
+5. In Cloudflare Workers Builds, set the Worker root directory to `apps/worker` (the `wrangler.toml` and Worker package live there), then run `npm install` from that directory.
 6. Set Worker secrets with `npx wrangler secret put SUPABASE_URL` and `npx wrangler secret put SUPABASE_ANON_KEY`.
 7. Run `npx wrangler dev` for local API development and serve `apps/web` from a local static server.
 8. Deploy the Worker with `npx wrangler deploy`, then deploy the static web app.
