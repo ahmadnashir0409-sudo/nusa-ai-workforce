@@ -15,4 +15,5 @@ new_sqlite_classes = ["WorkforceAgent"]
 
 [vars]
 CORS_ORIGIN = "http://localhost:8080"
+SUPABASE_ANON_KEY = "sb_publishable_2KzClr1ZNfPEa8IP30xxzg_eIZsnF8S"
 AI_MODEL = "@cf/meta/llama-3.1-8b-instruct"
